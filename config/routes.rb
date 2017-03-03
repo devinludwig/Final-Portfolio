@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :admins
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin', controller: 'admin'
   get 'home/index'
 
   get 'home/about'
