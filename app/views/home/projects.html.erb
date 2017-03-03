@@ -1,5 +1,10 @@
-<h1>Home#projects</h1>
-<p>
-  <%= @url %>
-</p>
-<%= @repos %>
+<div class="text">
+  <h1 class="center">Projects</h1>
+  <div class="row">
+    <% @repos.each do |repo| %>
+      <div class="card col s4 repo">
+        <h5 class="card-content"> <%= link_to repo['name'], repo['html_url'] %></h2>
+      </div>
+    <% end %>
+  </div>
+</div>
